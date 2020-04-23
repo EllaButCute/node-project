@@ -4,14 +4,22 @@
   "description": "my first node project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "./node_modules/.bin/tsc", 
-    "start":"node ./bin/node-project" 
+    "test": "./node_modules/.bin/ava",
+    "prestart": "./node_modules/.bin/tsc",
+    "start": "node ./bin/node-project"
   },
   "keywords": [],
-  "author": "Ella Rodgers <Ella@wvvw.me> (https://github.com/EllaButCute)",
+  "author": "Ella Rodgers <ella@wvvw.me> (https://github.com/EllaButCute)",
   "license": "MIT",
   "dependencies": {
     "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "ava": "^3.7.1",
+    "ts-node": "^8.9.0"
+  },
+  "ava": {
+    "extensions": ["ts"],
+    "require": ["ts-node/register"]
   }
 }

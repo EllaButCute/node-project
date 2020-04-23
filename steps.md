@@ -2,7 +2,7 @@
 
 <!-- press "ctrl + /" to make comments. -->
 <!-- Space things out (with lines). -->
-<!-- Links work like this but dont preview on Visual Studio. -->
+<!-- Links work like  -->
 [Post setup](#yay-you-have-a-good-set-up-now-have-fun) 
 
 <hr>
@@ -87,7 +87,32 @@
 
 ## **yay you have a good set up now, have fun**
 
-27. 
+27. type `npm i --save-dev ava` into the console
+28. create a folder called test
+29. create a file called `utils.test.ts` in the test folder
+30. type `import test from 'ava';` in the `utils.test.ts` file
+31. type `npm i --save-dev ts-node` into the console
+32. in the `package.json` file, make the code under `"devDependencies"` look like bellow
+    ```json
+    ...
+    "ava": {
+        "extensions": ["ts"],
+        "require": ["ts-node/register"]
+    }
+    ...
+    ```
+33. make `utils.test.ts` look like bellow
+    ```ts
+    import test from 'ava';
+    import {capitalise} from '../app/utils';
+
+    test('capitalise a string',(t) => {
+        t.is(capitalise("this is a string"), "THIS IS A STRING");
+        t.is(capitalise("this is a cheeky string"), "THIS IS A STRING");
+    })
+    ```
+34. type `.\node_modules\.bin\ava` in the terminal
+35. in `package.json` change the `"test": ...` script to `"test": "./node_modules/.bin/ava"`
 
 <hr>
 
