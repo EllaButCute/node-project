@@ -3,7 +3,7 @@
 <!-- press "ctrl + /" to make comments. -->
 <!-- Space things out (with lines). -->
 <!-- Links work like this but dont preview on Visual Studio. -->
-[safasdfasd](#steps) 
+[Post setup](#yay-you-have-a-good-set-up-now-have-fun) 
 
 <hr>
 
@@ -51,14 +51,57 @@
 16. its probably a good time to commit your code now, go to https://github.com/ and make a new repository for it. github will do give you code to enter in to the terminal.
 17. type code into your index.ts 
 
-18. I was up to prestart before i stopped
+18. in `package.json` add two scripts to look like bellow
+    ```json
+    {
+        ...,    
+        "prestart": "./node_modules/.bin/tsc", 
+        "start":"node ./bin/node-project", 
+        ...
+    }
+    ```
+19. in terminal type `npm start` to test (use `--silent` to hide all the log junk from showing)
+20. while we are here, lets look at our licence (look at the TLDR licesnse website)
+21. add yourself as the author `"firstname lastname <email> (website)"`
+22. in `index.ts` add `import {capitalise} from './utils';` to the top
+23. create the `utils.ts` file in the `app` folder
+24. in `utils.ts` add the follwing code
+    ```ts
+    export const capitalise = (...words: string[]) => {
+        return words.map(word => word.toUpperCase()).join('-');
+    }
+    ```
+25. in the `index.ts` file change the code to look like the following
+    ```ts
+    import {capitalise} from './utils';
+    
+    const app = () => {
+        console.info(capitalise("Hewwo Worwd", "im a good girl")) 
+    };
 
+    export default app;
+    ```
+26. type `npm start --silent` into the terminal
 
 <hr>
 
-#### Other things
+## **yay you have a good set up now, have fun**
+
+27. 
+
+<hr>
+
+### Other things
+
+#### markdown
 
 ```js 
-// Put javascript code here.
-var name = "steve";
+    // Put javascript code here.
+    var name = "steve";
 ```
+
+#### typescript
+
+`() =>` is better then `function()` unless `function()` is needed 
+
+#### javascript

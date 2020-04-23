@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "", 
-    "start":"node .\bin\node-project" 
+    "prestart": "./node_modules/.bin/tsc", 
+    "start":"node ./bin/node-project" 
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Ella Rodgers <Ella@wvvw.me> (https://github.com/EllaButCute)",
+  "license": "MIT",
   "dependencies": {
     "typescript": "^3.8.3"
   }
