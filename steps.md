@@ -115,15 +115,40 @@
 35. in `package.json` change the `"test": ...` script to `"test": "./node_modules/.bin/ava"`
 36. type `npm test` in the terminal to test things out
 
+37. in terminal type `npm i commitizen -g` (only do this once per computer)
+38. in terminal type `commitizen init cz-conventional-changelog --save-dev --save-exact` sets the config to commitizens default.
+39. type `npx git-cz` in the terminal to commit stuff
+40. in `utils.ts` lets add a new function called log, it should look like this:
+    ```ts
+    ...
+    export const log = (message: string) => {
+        console.info(message)
+    }
+    ```
+41. in `index.ts` import the log by adding `log` to the import objects from `'./utils'` 
+    ```ts
+    import {capitalise,log} from './utils';
+    ```
+42. now lets call the `log` function in the `app` 
+
+
 <hr>
 
 ### Other things
+
+#### npm
+
+`--save-dev` is used for development dependancies, wont be included when built
 
 #### git
 
 A properly formed Git commit subject line should always be able to complete the following sentence:
 
 If applied, this commit will your subject line here
+
+`git log --pretty=oneline` in terminal to  show all the commits
+
+`npx git-cz` to use commitizen to the project
 
 
 #### markdown
@@ -136,5 +161,6 @@ If applied, this commit will your subject line here
 #### typescript
 
 `() =>` is better then `function()` unless `function()` is needed 
+
 
 #### javascript
