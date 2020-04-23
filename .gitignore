@@ -3,6 +3,8 @@ node_modules
 
 #typescript
 app/**/*.js
+test/**/*.js
 
 #visual studio
 .vscode
+
