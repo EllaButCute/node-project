@@ -21,7 +21,7 @@
     ], 
     ```
 7. Make a `.gitignore` file.
-8. Add node_modules to `.gitignore`.
+8. Add `node_modules` and `app/**/*.js` to `.gitignore`.
 9. Make new folders (bin and app).
 10. Create a `index.ts` file in the app folder.
 11. Create a `node-project` (Name of the project) binary file in the bin file (no extension).
@@ -48,8 +48,10 @@
     ```
     *note: the `() =>` is an anon function, use `function app()` to use things like `this.`.*
 15. In the terminal type `.\node_modules\.bin\tsc` to create a index.js file.
-16. 
+16. its probably a good time to commit your code now, go to https://github.com/ and make a new repository for it. github will do give you code to enter in to the terminal.
+17. type code into your index.ts 
 
+18. I was up to prestart before i stopped
 
 
 <hr>

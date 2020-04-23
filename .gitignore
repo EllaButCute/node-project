@@ -1,5 +1,8 @@
-# node
+#node
 node_modules
 
 #typescript
 app/**/*.js
+
+#visual studio
+.vscode
