@@ -113,10 +113,18 @@
     ```
 34. type `.\node_modules\.bin\ava` in the terminal
 35. in `package.json` change the `"test": ...` script to `"test": "./node_modules/.bin/ava"`
+36. type `npm test` in the terminal to test things out
 
 <hr>
 
 ### Other things
+
+#### git
+
+A properly formed Git commit subject line should always be able to complete the following sentence:
+
+If applied, this commit will your subject line here
+
 
 #### markdown
 
